@@ -1,0 +1,18 @@
+﻿
+@model List<WebApplication1.Models.WeatherDataModel>
+
+@if (ViewBag.WeatherData != null)
+{
+    <div>
+        <h2>Fetched Weather Data:</h2>
+        @foreach (var weather in ViewBag.WeatherData)
+        {
+            <p>Date: @weather.Date</p>
+            <p>Temperature (C): @weather.TemperatureC</p>
+            <p>Temperature (F): @weather.TemperatureF</p>
+            <p>Summary: @weather.Summary</p>
+            <hr />
+        }
+    </div>
+}
+
